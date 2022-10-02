@@ -1,0 +1,154 @@
+let a = 10;
+let b = 5;
+
+// console.log('soma: ' + (a + b));
+// console.log('subtração: ' + (a - b));
+// console.log('multiplicação: ' + (a*b));
+// console.log('divisão: ' + (a / b));
+// console.log('módulo: ' + (a % b));
+
+if ( a > b) {
+    // console.log ('a é maior');
+} else if (a < b) {
+    // console.log ('b é maior');
+} else {
+    // console.log ('são iguais');
+}
+
+let c = 15;
+
+if ( a > b && a > c) {
+    // console.log ('a é o maior de todos');
+} else if (b > a && b > c) {
+    // console.log ('b é o maior de todos');
+} else {
+    // console.log ('c é o maior de todos');
+}
+
+let number = -3;
+
+if (number > 0) {
+    // console.log ('positive');
+} else if (number < 0) {
+    // console.log ('negative');
+} else {
+    // console.log ('zero');
+}
+
+let angle1 = 90;
+let angle2 = 30;
+let angle3 = 60;
+
+let sumOfAngles = angle1 + angle2 + angle3;
+let allAnglesArePositives = angle1 > 0 && angle2 > 0 && angle3 > 0;
+
+if (allAnglesArePositives) {
+    if(sumOfAngles === 180) {
+        // console.log(true);
+    } else {
+        // console.log(false);
+    };
+} else {
+    // console.log('erro: ângulo inválido');
+}
+
+const chessPiece = 'bispo';
+
+switch (chessPiece.toLowerCase()) {
+  case 'rei':
+    // console.log('Rei-> Uma casa apenas para qualquer direção.');
+    break;
+  case 'bispo':
+    // console.log('Bispo-> Diagonal.');
+    break;
+  case 'rainha':
+    // console.log('Rainha-> Diagonal, horizontal e vertical.');
+    break;
+  case 'cavalo':
+    // console.log('Cavalo -> "L" pode pular sobre as peças.');
+    break;
+  case 'torre':
+    // console.log('Torre -> Horizontal e vertical.');
+    break;
+  case 'peão':
+    // console.log("Peão -> Apenas uma casa para frente, no primeiro movimento podem ser duas casas.");
+    break;
+  default:
+    // console.log('Erro, peça inválida!');
+    break;
+};
+
+const grade = 73;
+
+if (grade < 0 || grade > 100) {
+    // console.log ('erro, nota incorreta');
+} else if (grade >= 90) {
+    // console.loge ('A');
+} else if (grade >= 80 && grade < 90) {
+    // console.log('B');
+} else if ( grade >= 70 && grade < 80) {
+    // console.log ('C');
+} else if ( grade >= 60 && grade < 70) {
+    // console.log ('D');
+} else if ( grade >= 50 && grade < 60) {
+    // console.log ('E');
+} else {
+    // console.log ('F');
+}
+
+let isEven = false;
+
+if ((a % 2 === 0 || b % 2 === 0 || c % 2 === 0)){
+    isEven = true;
+};
+// console.log(isEven);
+
+let isOdd = false;
+
+if ((a % 2 !== 0 || b % 2 !== 0 || c % 2 !== 0)){
+    isOdd = true;
+}
+// console.log(isOdd);
+
+let costOfProduct = 2;
+let saleValue = 5;
+
+if (costOfProduct >= 0 && saleValue >= 0) {
+    const totalCostOfProduct = costOfProduct *1.2;
+    const totalProfit = (saleValue - totalCostOfProduct) * 1000;
+    // console.log(totalProfit);
+} else {
+    // console.log('error, os valores não podem ser negativos');
+}
+
+
+let aliquotINSS;
+let aliquotIR;
+
+const grossSalary = 2000.00;
+
+if (grossSalary <= 1556.94) {
+  aliquotINSS = grossSalary * 0.08;
+} else if (grossSalary <= 2594.92) {
+  aliquotINSS = grossSalary * 0.09;
+} else if (grossSalary <= 5189.82) {
+  aliquotINSS = grossSalary * 0.11;
+} else {
+  aliquotINSS = 570.88;
+}
+
+const baseSalary = grossSalary - aliquotINSS;
+
+if (baseSalary <= 1903.98) {
+  aliquotIR = 0;
+} else if (baseSalary <= 2826.65) {
+  aliquotIR = (baseSalary * 0.075) - 142.80;
+} else if (baseSalary <= 3751.05) {
+  aliquotIR = (baseSalary * 0.15) - 354.80;
+} else if (baseSalary <= 4664.68) {
+  aliquotIR = (baseSalary * 0.225) - 636.13;
+} else {
+  aliquotIR = (baseSalary * 0.275) - 869.36;
+};
+
+console.log("Salário: " + (baseSalary - aliquotIR));
